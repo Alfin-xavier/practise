@@ -42,6 +42,6 @@ public class SearchProductTest extends BasePage
 	@AfterMethod
 	public void closeBrowser()
 	{
-		driver.close();
+		driver.quit();
 	}
 }
