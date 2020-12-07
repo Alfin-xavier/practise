@@ -7,6 +7,8 @@
       <class name="com.atmecs.archetype.testscript.SearchProductTest">
         <methods>
           <include name="searchProduct"/>
+          <include name="initBrowser"/>
+          <include name="closeBrowser"/>
           <include name="afterTest"/>
           <include name="beforeTest"/>
         </methods>
@@ -19,6 +21,8 @@
       <class name="com.atmecs.archetype.testscript.SearchProductTest">
         <methods>
           <include name="searchProduct"/>
+          <include name="initBrowser"/>
+          <include name="closeBrowser"/>
           <include name="afterTest"/>
           <include name="beforeTest"/>
         </methods>

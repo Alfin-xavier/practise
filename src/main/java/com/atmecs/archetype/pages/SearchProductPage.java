@@ -1,5 +1,7 @@
 package com.atmecs.archetype.pages;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -14,10 +16,10 @@ public class SearchProductPage
 		this.driver = driver;
 	}
 	
-	public void enterText(String xpath, String value)
+	public void clickIcon(String xpath)
 	{
-		WebElement searchBox = driver.findElement(By.xpath(xpath));
-		searchBox.sendKeys(value);
-		searchBox.sendKeys(Keys.ENTER);
+		driver.manage().timeouts().implicitlyWait(10000, TimeUnit.SECONDS);
+		driver.findElement(By.xpath(xpath)).click();
+	
 	}
 }
