@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 47.684 s <<< FAILURE! - in TestSuite
+com.atmecs.archetype.testscript.SearchProductTest.searchProduct  Time elapsed: 0.03 s  <<< FAILURE!
+java.lang.NullPointerException
+	at com.atmecs.archetype.testscript.SearchProductTest.searchProduct(SearchProductTest.java:24)
+
+com.atmecs.archetype.testscript.SearchProductTest.searchProduct  Time elapsed: 0 s  <<< FAILURE!
+java.lang.NullPointerException
+	at com.atmecs.archetype.testscript.SearchProductTest.searchProduct(SearchProductTest.java:24)
+

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+
+	<!--  <listeners>
+		<listener
+			class-name="com.atmecs.archetype.util.TestNGListeners">
+		</listener>
+	</listeners> -->
+
+  <test thread-count="5" name="ChromeTest">
+	  <parameter name="browser" value="chrome"/>
+		  <classes> 
+		  	<class name="com.atmecs.archetype.testscript.SearchProductTest"></class>
+		  </classes>
+  </test> 
+  
+  <test thread-count="5" name="FirefoxTest">
+	  <parameter name="browser" value="firefox"/>
+		  <classes> 
+		  	<class name="com.atmecs.archetype.testscript.SearchProductTest"></class>
+		  </classes>
+  </test> 
+  
+</suite> <!-- Suite -->
