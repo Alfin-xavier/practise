@@ -1,17 +1,10 @@
 package com.atmecs.archetype.testscript;
 
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.util.Properties;
-
-import org.openqa.selenium.Capabilities;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
-
 import com.atmecs.archetype.constant.FilePathConstants;
 import com.atmecs.archetype.pages.BasePage;
 import com.atmecs.archetype.pages.SearchProductPage;
@@ -19,29 +12,17 @@ import com.atmecs.archetype.utils.PropertyReader;
 
 public class SearchProductTest extends BasePage
 {
-	WebDriver driver;
 	
 	SearchProductPage searchProduct = new SearchProductPage(driver);
 	
-	Properties locaterProps = PropertyReader.readProperties(FilePathConstants.LOCATOR_FILE_PATH);
-	
-	@BeforeMethod
-	public void initBrowser() throws MalformedURLException
-	{
-		String gridUrl = "localhost:4444";
-		Capabilities cabs = DesiredCapabilities.chrome();
-		driver = new RemoteWebDriver(new URL(gridUrl), cabs);
-	}
+	Properties locatorProps = PropertyReader.readProperties(FilePathConstants.LOCATOR_FILE_PATH);
 	
 	@Test
 	public void searchProduct()
 	{
-		searchProduct.clickIcon(locaterProps.getProperty("clickIcon"));
+		WebElement searchBox = driver.findElement(By.xpath("//input[@name='search_query']"));
+		searchBox.sendKeys("tops");
+		searchBox.sendKeys(Keys.ENTER);
 	}
 	
-	@AfterMethod
-	public void closeBrowser()
-	{
-		driver.quit();
-	}
 }

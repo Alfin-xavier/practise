@@ -8,25 +8,10 @@
         <methods>
           <include name="searchProduct"/>
           <include name="initBrowser"/>
-          <include name="closeBrowser"/>
           <include name="afterTest"/>
           <include name="beforeTest"/>
         </methods>
       </class> <!-- com.atmecs.archetype.testscript.SearchProductTest -->
     </classes>
   </test> <!-- ChromeTest(failed) -->
-  <test thread-count="5" parallel="tests" name="FirefoxTest(failed)" verbose="0">
-    <parameter name="browser" value="firefox"/>
-    <classes>
-      <class name="com.atmecs.archetype.testscript.SearchProductTest">
-        <methods>
-          <include name="searchProduct"/>
-          <include name="initBrowser"/>
-          <include name="closeBrowser"/>
-          <include name="afterTest"/>
-          <include name="beforeTest"/>
-        </methods>
-      </class> <!-- com.atmecs.archetype.testscript.SearchProductTest -->
-    </classes>
-  </test> <!-- FirefoxTest(failed) -->
 </suite> <!-- Failed suite [Suite] -->

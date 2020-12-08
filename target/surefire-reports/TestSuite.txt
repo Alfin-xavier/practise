@@ -1,12 +1,13 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 8, Failures: 2, Errors: 0, Skipped: 6, Time elapsed: 36.417 s <<< FAILURE! - in TestSuite
-com.atmecs.archetype.testscript.SearchProductTest.initBrowser  Time elapsed: 12.356 s  <<< FAILURE!
-java.net.MalformedURLException: unknown protocol: localhost
-	at com.atmecs.archetype.testscript.SearchProductTest.initBrowser(SearchProductTest.java:33)
-
-com.atmecs.archetype.testscript.SearchProductTest.initBrowser  Time elapsed: 17.974 s  <<< FAILURE!
-java.net.MalformedURLException: unknown protocol: localhost
-	at com.atmecs.archetype.testscript.SearchProductTest.initBrowser(SearchProductTest.java:33)
+Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 23.777 s <<< FAILURE! - in TestSuite
+com.atmecs.archetype.testscript.SearchProductTest.afterTest  Time elapsed: 3.616 s  <<< FAILURE!
+org.openqa.selenium.NoSuchSessionException: 
+Tried to run command without establishing a connection
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'ATMECSINLT-601', ip: '192.168.163.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.1'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 83.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20201112153044, moz:geckodriverVersion: 0.28.0, moz:headless: false, moz:processID: 17212, moz:profile: C:\Users\alfin.anthonyraj\A..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: afec7533-c805-4dfa-9ea6-77726175c7b7
 

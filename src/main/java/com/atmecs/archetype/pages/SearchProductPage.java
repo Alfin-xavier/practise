@@ -14,10 +14,14 @@ public class SearchProductPage
 		this.driver = driver;
 	}
 	
-	public void clickIcon(String xpath)
+	public void enterText(String xpath, String value)
 	{
 		driver.manage().timeouts().implicitlyWait(10000, TimeUnit.SECONDS);
-		driver.findElement(By.xpath(xpath)).click();
+		driver.findElement(By.xpath(xpath)).sendKeys(value);
+	}
 	
+	public void clickSearchButton(String xpath)
+	{
+		driver.findElement(By.xpath(xpath)).click();
 	}
 }
